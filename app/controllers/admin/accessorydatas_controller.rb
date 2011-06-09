@@ -1,4 +1,4 @@
-class AccessorydatasController < ApplicationController
+class Admin::AccessorydatasController < Admin::AdminController
 
   before_filter :load_resources, :only => %w(new create edit update)
 

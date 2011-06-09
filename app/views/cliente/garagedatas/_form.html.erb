@@ -1,15 +1,5 @@
 <%= form_for[:cliente,@garagedata] do |f| %>
-  <% if @garagedata.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@garagedata.errors.count, "error") %> prohibited this garagedata from being saved:</h2>
-
-      <ul>
-      <% @garagedata.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= error_messages_for @garagedata %>
 
   <div class="field">
     <%= f.label :name %><br />

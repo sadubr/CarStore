@@ -14,8 +14,8 @@
     <td><%= accessory.name %></td>
     <td><%= accessory.service_id %></td>
     <td><%= link_to 'Show', cliente_accessory_path(accessory) %></td>
-    <td><%= link_to 'Edit', edit_cliente_accessory_path(accessory) %></td>
-    <td><%= link_to 'Destroy', cliente_accessory_path(accessory), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to_edit [:edit, :cliente, accessory] %></td>
+    <td><%= link_to_destroy [:cliente, accessory] %></td>
   </tr>
 <% end %>
 </table>

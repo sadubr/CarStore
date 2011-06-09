@@ -1,15 +1,5 @@
 <%= form_for(@storecar) do |f| %>
-  <% if @storecar.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@storecar.errors.count, "error") %> prohibited this storecar from being saved:</h2>
-
-      <ul>
-      <% @storecar.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= error_messages_for @storecar %>
 
   <div class="field">
     <%= f.label :name %><br />

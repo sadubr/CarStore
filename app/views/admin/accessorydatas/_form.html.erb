@@ -1,15 +1,5 @@
 <%= form_for(@accessorydata) do |f| %>
-  <% if @accessorydata.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@accessorydata.errors.count, "error") %> prohibited this accessorydata from being saved:</h2>
-
-      <ul>
-      <% @accessorydata.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= error_messages_for @accessorydata %>
 
   <div class="field">
     <%= f.label :name %><br />
