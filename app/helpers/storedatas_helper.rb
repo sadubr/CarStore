@@ -1,0 +1,2 @@
+module StoredatasHelper
+end

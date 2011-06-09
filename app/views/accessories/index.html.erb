@@ -1,0 +1,26 @@
+<h1>Listing accessories</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Service</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @accessories.each do |accessory| %>
+  <tr>
+    <td><%= accessory.name %></td>
+    <td><%= accessory.service_id %></td>
+    <td><%= link_to 'Show', accessory %></td>
+    <td><%= link_to 'Edit', edit_accessory_path(accessory) %></td>
+    <td><%= link_to 'Destroy', accessory, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Accessory', new_accessory_path %>
+

@@ -1,0 +1,26 @@
+<h1>Listing garagedatas</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Garage</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @garagedatas.each do |garagedata| %>
+  <tr>
+    <td><%= garagedata.name %></td>
+    <td><%= garagedata.garage_id %></td>
+    <td><%= link_to 'Show', garagedata %></td>
+    <td><%= link_to 'Edit', edit_garagedata_path(garagedata) %></td>
+    <td><%= link_to 'Destroy', garagedata, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Garagedata', new_garagedata_path %>
+
