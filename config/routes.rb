@@ -1,5 +1,7 @@
 CarStore::Application.routes.draw do
 
+  get "dashboard/index"
+
   resources :garages
   resources :accessories
   resources :services
@@ -8,10 +10,14 @@ CarStore::Application.routes.draw do
   resources :users
 
   namespace :usuario do
+    root :to => "dashboard#index"
+
     resources :users
   end
 
   namespace :cliente do
+    root :to => "dashboard#index"
+
     resources :garagedatas
     resources :garages
     resources :accessorydatas
@@ -27,6 +33,8 @@ CarStore::Application.routes.draw do
   end
 
   namespace :admin do
+    root :to => "dashboard#index"
+
     resources :garagedatas
     resources :garages
     resources :accessorydatas
