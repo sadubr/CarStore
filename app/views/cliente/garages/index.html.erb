@@ -1,0 +1,26 @@
+<h1>Listing garages</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Service</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @garages.each do |garage| %>
+  <tr>
+    <td><%= garage.name %></td>
+    <td><%= garage.service_id %></td>
+    <td><%= link_to 'Show', cliente_garage_path(garage) %></td>
+    <td><%= link_to 'Edit', edit_cliente_garage_path(garage) %></td>
+    <td><%= link_to 'Destroy', cliente_garage_path(garage), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Garage', new_cliente_garage_path %>
+

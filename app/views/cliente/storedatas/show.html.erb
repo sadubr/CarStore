@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @storedata.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @storedata.email %>
+</p>
+
+<p>
+  <b>Store:</b>
+  <%= @storedata.store_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_storedata_path(@storedata) %> |
+<%= link_to 'Back', storedatas_path %>
+

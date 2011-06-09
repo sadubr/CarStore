@@ -1,4 +1,4 @@
-class Usuario::UsersController < Usuario::UsuarioController
+class UsersController < ApplicationController
 
 
   def index
@@ -8,7 +8,9 @@ class Usuario::UsersController < Usuario::UsuarioController
 
   def show
     @user = User.find(params[:id])
-    render :layout => "application"
+    respond_with @user do |format|
+        format.html { render :layout => "application" }
+    end
   end
 
   def new

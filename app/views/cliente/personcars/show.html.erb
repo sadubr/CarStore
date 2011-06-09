@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @personcar.name %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @personcar.color %>
+</p>
+
+<p>
+  <b>Person:</b>
+  <%= @personcar.person_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_personcar_path(@personcar) %> |
+<%= link_to 'Back', personcars_path %>
+

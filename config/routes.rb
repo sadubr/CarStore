@@ -1,31 +1,47 @@
 CarStore::Application.routes.draw do
-  resources :garagedatas
 
   resources :garages
-
-  resources :accessorydatas
-
   resources :accessories
-
   resources :services
-
-  resources :storecars
-
-  resources :storedatas
-
   resources :stores
-
-  resources :personcars
-
-  resources :persondatas
-
   resources :people
-
   resources :users
 
   namespace :usuario do
-    resource :users
+    resources :users
   end
+
+  namespace :cliente do
+    resources :garagedatas
+    resources :garages
+    resources :accessorydatas
+    resources :accessories
+    resources :services
+    resources :storecars
+    resources :storedatas
+    resources :stores
+    resources :personcars
+    resources :persondatas
+    resources :people
+    resources :users
+  end
+
+  namespace :admin do
+    resources :garagedatas
+    resources :garages
+    resources :accessorydatas
+    resources :accessories
+    resources :services
+    resources :storecars
+    resources :storedatas
+    resources :stores
+    resources :personcars
+    resources :persondatas
+    resources :people
+    resources :users
+  end
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

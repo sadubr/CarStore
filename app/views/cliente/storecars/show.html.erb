@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @storecar.name %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @storecar.color %>
+</p>
+
+<p>
+  <b>Store:</b>
+  <%= @storecar.store_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_storecar_path(@storecar) %> |
+<%= link_to 'Back', storecars_path %>
+

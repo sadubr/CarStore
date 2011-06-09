@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @garage.name %>
+</p>
+
+<p>
+  <b>Service:</b>
+  <%= @garage.service_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_garage_path(@garage) %> |
+<%= link_to 'Back', garages_path %>
+
