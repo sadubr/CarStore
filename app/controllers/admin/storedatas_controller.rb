@@ -1,4 +1,4 @@
-class StoredatasController < ApplicationController
+class Admin::StoredatasController < Admin::AdminController
 
   before_filter :load_resources, :only => %w(new create edit update)
 

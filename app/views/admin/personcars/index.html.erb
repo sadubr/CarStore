@@ -15,14 +15,14 @@
     <td><%= personcar.name %></td>
     <td><%= personcar.color %></td>
     <td><%= personcar.person_id %></td>
-    <td><%= link_to 'Show', personcar %></td>
-    <td><%= link_to 'Edit', edit_personcar_path(personcar) %></td>
-    <td><%= link_to 'Destroy', personcar, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', admin_personcar_path(personcar) %></td>
+    <td><%= link_to_edit [:edit, :admin, personcar] %></td>
+    <td><%= link_to_destroy [:admin, personcar] %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Personcar', new_personcar_path %>
+<%= link_to 'New Personcar', new_admin_personcar_path %>
 

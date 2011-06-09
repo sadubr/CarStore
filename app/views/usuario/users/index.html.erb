@@ -13,9 +13,9 @@
   <tr>
     <td><%= user.email %></td>
     <td><%= user.password %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', usuario_user_path(user) %></td>
+    <td><%= link_to_edit [:edit, :usuario, user] %></td>
+    <td><%= link_to_destroy [:usuario, user] %></td>
   </tr>
 <% end %>
 </table>
@@ -23,3 +23,4 @@
 <br />
 
 <%= link_to 'New User', new_user_path %>
+

@@ -13,14 +13,14 @@
   <tr>
     <td><%= accessorydata.name %></td>
     <td><%= accessorydata.accessory_id %></td>
-    <td><%= link_to 'Show', accessorydata %></td>
-    <td><%= link_to 'Edit', edit_accessorydata_path(accessorydata) %></td>
-    <td><%= link_to 'Destroy', accessorydata, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', admin_accessorydata_path(accessorydata) %></td>
+    <td><%= link_to_edit [:edit, :admin, accessorydata] %></td>
+    <td><%= link_to_destroy [:admin, accessorydata] %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Accessorydata', new_accessorydata_path %>
+<%= link_to 'New Accessorydata', new_admin_accessorydata_path %>
 

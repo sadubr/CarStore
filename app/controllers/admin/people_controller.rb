@@ -1,4 +1,4 @@
-class PeopleController < ApplicationController
+class Admin::PeopleController < Admin::AdminController
 
 
   before_filter :load_resources, :only => %w(new create edit update)

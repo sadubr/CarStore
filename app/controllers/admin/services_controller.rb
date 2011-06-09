@@ -1,4 +1,4 @@
-class ServicesController < ApplicationController
+class Admin::ServicesController < Admin::AdminController
 
   before_filter :load_resources, :only => %w(new create edit update)
 

@@ -15,14 +15,14 @@
     <td><%= storedata.name %></td>
     <td><%= storedata.email %></td>
     <td><%= storedata.store_id %></td>
-    <td><%= link_to 'Show', storedata %></td>
-    <td><%= link_to 'Edit', edit_storedata_path(storedata) %></td>
-    <td><%= link_to 'Destroy', storedata, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', admin_storedata_path(storedata) %></td>
+    <td><%= link_to_edit [:edit, :admin, storedata] %></td>
+    <td><%= link_to_destroy [:admin, storedata] %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Storedata', new_storedata_path %>
+<%= link_to 'New Storedata', new_admin_storedata_path %>
 

@@ -1,4 +1,4 @@
-class PersoncarsController < ApplicationController
+class Admin::PersoncarsController < Admin::AdminController
 
   before_filter :load_resources, :only => %w(new create edit update)
   # GET /personcars

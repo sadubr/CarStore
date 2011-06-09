@@ -13,14 +13,14 @@
   <tr>
     <td><%= garagedata.name %></td>
     <td><%= garagedata.garage_id %></td>
-    <td><%= link_to 'Show', garagedata %></td>
-    <td><%= link_to 'Edit', edit_garagedata_path(garagedata) %></td>
-    <td><%= link_to 'Destroy', garagedata, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', admin_garagedata_path(garagedata) %></td>
+    <td><%= link_to_edit [:edit, :admin, garagedata] %></td>
+    <td><%= link_to_destroy [:admin, garagedata] %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Garagedata', new_garagedata_path %>
+<%= link_to 'New Garagedata', new_admin_garagedata_path %>
 

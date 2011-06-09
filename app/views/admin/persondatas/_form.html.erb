@@ -1,4 +1,4 @@
-<%= form_for(@persondata) do |f| %>
+<%= form_for [:admin, @persondata] do |f| %>
   <%= error_messages_for @persondata %>
 
   <div class="field">

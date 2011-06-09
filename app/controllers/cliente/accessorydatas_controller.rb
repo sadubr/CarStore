@@ -17,7 +17,7 @@ class Cliente::AccessorydatasController < Cliente::ClienteController
 
   def new
     @accessorydata = Accessorydata.new()
-    respond_with @accessorydata
+    respond_with @accessorydata, :location => cliente_accessorydatas_path
   end
 
   def edit
@@ -28,7 +28,7 @@ class Cliente::AccessorydatasController < Cliente::ClienteController
     @accessorydata = Accessorydata.new(params[:accessorydata])
 
     flash[:notice] = "Accessorydata was successfully created." if @accessorydata.save
-    respond_with @accessorydata, cliente_accessorydatas_path
+    respond_with @accessorydata, :location => cliente_accessorydatas_path
 
   end
 
@@ -36,7 +36,7 @@ class Cliente::AccessorydatasController < Cliente::ClienteController
     @accessorydata = Accessorydata.find(params[:id])
 
     flash[:notice] = "Accessorydata was successfully created." if @accessorydata.update_attributes(params[:accessorydata])
-    respond_with @accessorydata, cliente_accessorydatas_path
+    respond_with @accessorydata, :location => cliente_accessorydatas_path
   end
 
   # DELETE /accessorydatas/1
